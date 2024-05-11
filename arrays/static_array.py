@@ -90,3 +90,19 @@ class StaticArr:
             if index_arr[i] == val:
                 return i
         return -1
+
+    def pop(self, index=-1):
+        """
+        Remove the value at the index or the last value in the array if no
+        index provided.
+        """
+        if index >= self.allocation_size:
+            raise IndexError("Index out of bounds")
+        return_val = self._array[index]
+
+        # Now overwrite everything and shift down
+        for i in range(index, self._end_point):
+            self._array[i] = self._array[i + 1]
+        self._end_point -= 1
+        self._array[self._end_point + 1:] = self._placeholder
+
