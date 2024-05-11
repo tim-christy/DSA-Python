@@ -75,3 +75,18 @@ class StaticArr:
                 return
             else:
                 self.append(i)
+
+    def index(self, val, start_index=0, end_index=None):
+        """
+        Return the index of the first found value within the provided start and
+        end indices. Returns -1 if not found
+        """
+        if end_index is None:
+            index_arr = self._array[start_index:].copy()
+        else:
+            index_arr = self._array[start_index:end_index].copy()
+
+        for i in range(len(index_arr)):
+            if index_arr[i] == val:
+                return i
+        return -1
