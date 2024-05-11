@@ -106,3 +106,7 @@ class StaticArr:
         self._end_point -= 1
         self._array[self._end_point + 1:] = self._placeholder
 
+    def get(self, index):
+        """Return the value at an index"""
+        self._array[index]
+
