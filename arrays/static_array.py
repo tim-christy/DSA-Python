@@ -52,3 +52,17 @@ class StaticArr:
         for i in range(self.allocated_size):
             self._array[i] = self._placeholder
 
+    def copy(self):
+        """Return a copy of the array"""
+        import copy
+
+        return copy.deepcopy(self._array)
+
+    def count(self, val):
+        """Return the number of occurences of val"""
+        count = 0
+        for el in self._array[: self._end_point]:
+            if el == val:
+                count += 1
+        return count
+
