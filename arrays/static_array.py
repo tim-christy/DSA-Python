@@ -46,3 +46,9 @@ class StaticArr:
 
             # Increment our end pointer
             self._end_point += 1
+
+    def clear(self):
+        """Remove all elements from the array"""
+        for i in range(self.allocated_size):
+            self._array[i] = self._placeholder
+
