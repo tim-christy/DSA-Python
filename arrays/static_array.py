@@ -110,3 +110,7 @@ class StaticArr:
         """Return the value at an index"""
         self._array[index]
 
+    def reverse():
+        """Reverse the list"""
+        # This is probably shortcutting and I'm missing out on an algorithm
+        return self._array[::-1]
