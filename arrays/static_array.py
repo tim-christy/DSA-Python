@@ -114,3 +114,7 @@ class StaticArr:
         """Reverse the list"""
         # This is probably shortcutting and I'm missing out on an algorithm
         return self._array[::-1]
+
+    def sort():
+        """Sort the list"""
+        pass
