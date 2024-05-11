@@ -2,7 +2,7 @@ class StaticArr:
     def __init__(self, allocation_size=8):
         self.allocation_size = allocation_size
         self._placeholder = "-!@!-"
-        self._array = [self._placeholder] * self.allocated_size
+        self._array = [self._placeholder] * self.allocation_size
         self._end_point = 0
 
     def size(self):
@@ -49,7 +49,7 @@ class StaticArr:
 
     def clear(self):
         """Remove all elements from the array"""
-        for i in range(self.allocated_size):
+        for i in range(self.allocation_size):
             self._array[i] = self._placeholder
 
     def copy(self):
