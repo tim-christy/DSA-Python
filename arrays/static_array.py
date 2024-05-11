@@ -66,3 +66,12 @@ class StaticArr:
                 count += 1
         return count
 
+    def extend(self, it):
+        """
+        Extend a list with staticArr. Will only fill up to the available space
+        """
+        for i in it:
+            if self._end_point == self._length - 1:
+                return
+            else:
+                self.append(i)
