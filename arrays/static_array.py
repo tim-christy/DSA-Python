@@ -30,7 +30,7 @@ class StaticArr:
         If the array is not full, all values will be shifted down an index.
         """
         # Boundary check
-        if index >= self.allocation_size or index < 0:
+        if index > self._end_point + 1:
             raise IndexError("Insertion index is out of bounds")
 
         # If the array is full - ie pointer is at the end of array
