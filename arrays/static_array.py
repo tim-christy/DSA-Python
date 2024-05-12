@@ -109,7 +109,7 @@ class StaticArr:
 
     def get(self, index):
         """Return the value at an index"""
-        self._array[index]
+        return self._array[index]
 
     def reverse(self):
         """Reverse the list"""
