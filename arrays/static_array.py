@@ -16,8 +16,8 @@ class StaticArr:
     def append(self, val):
         """Appends val to the array if space is available. Otherwise errors"""
         if self._end_point != self.allocation_size - 1:
-            self._array[self._end_point] = val
             self._end_point += 1
+            self._array[self._end_point] = val
         else:
             raise IndexError(
                 "Array is full and cannot be added to. Use insert()"
