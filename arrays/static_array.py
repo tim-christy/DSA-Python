@@ -3,7 +3,11 @@ class StaticArr:
         self.allocation_size = allocation_size
         self._placeholder = "-!@!-"
         self._array = [self._placeholder] * self.allocation_size
-        self._end_point = 0
+        self._end_point = -1
+
+    # Print out a friendlier representation of the array
+    def __repr__(self):
+        return str(self._array[: self._end_point + 1])
 
     def size(self):
         """Returns size of the array, i.e. number of elements in the array"""
